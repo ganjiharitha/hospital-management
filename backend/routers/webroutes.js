@@ -14,7 +14,9 @@ webRouter.get("/login", function(req, res){
 webRouter.get("/register", function(req, res){
    res.sendFile(path.join(htmlbase, "registerpage.html"));
 })
-
+webRouter.get("/admin", function(req, res){
+    res.sendFile(path.join(htmlbase, "admin.html"));
+ })
 
 
 module.exports = webRouter;
