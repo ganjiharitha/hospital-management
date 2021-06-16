@@ -8,6 +8,7 @@ $(document).ready(function() {
        $('#homeregb').hide();
        $('#homelogb').hide();
        $('#adminlogb').hide();
+       $('#adminregb').hide();
        $('#signout').show();
        $('#weltag').html("Welcome "+a[0].user);
         console.log(a[0].user);
@@ -15,7 +16,8 @@ $(document).ready(function() {
     else{
        $('#homeregb').show();
        $('#homelogb').show();
-       $('#adminlogb').hide();
+       $('#adminlogb').show();
+       $('#adminregb').show();
        $('#signout').hide();
        $('#weltag').html("Welcome User");
     }
@@ -35,6 +37,9 @@ $(document).ready(function() {
    $("#adminlogb").click(function(){
     window.location="https://hospital-management-mini.herokuapp.com/admin";
    })
+   $("#adminlogb").click(function(){
+      window.location="https://hospital-management-mini.herokuapp.com/adminregister";
+     })
  });
  window.onbeforeunload = function(e){
     gapi.auth2.getAuthInstance().signOut();
