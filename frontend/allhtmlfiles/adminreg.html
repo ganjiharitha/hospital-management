@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Admin Register</title>
+    <link rel="stylesheet" href="/allcssfiles/logincs.css">
+    <link rel="stylesheet" href="/allcssfiles/adminreg.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+     <script src="/alljsfile/adminreg.js"></script>
+     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+</head>
+<body>
+    <div class="wholepage">
+        <div class="inputsec">
+            <div class="logheadreg">
+                <h1>Admin Register</h1>
+            </div>
+            <br><br>
+            <div class="userdiv">
+                <i class="fa fa-id-card uicon" aria-hidden="true"></i>
+                <select name="urole" id="urole" class ="usern">
+                    <option value="doctor">doctor</option>
+                    <option value="receptionist">receptionist</option>
+                </select>
+               <br>
+             </div>
+
+           <br>
+        <div class="userdiv">
+            <i class="fa fa-user uicon" aria-hidden="true"></i>
+            <input type="text" placeholder="Enter your name" name="uname" class="usern" id ="uname" required><br>
+        </div>
+        <br>
+        <div class="userdiv">
+            <i class="fa fa-envelope-o uicon" aria-hidden="true"></i>
+            <input type="email" placeholder="Email address" name="ename" class="usern" id ="ename" required><br>
+        </div>
+        <br>
+        <div class="userdiv">
+            <i class="fa fa-phone uicon" aria-hidden="true"></i>
+            <input type="text" placeholder="Phone Number" name="pnum" class = "usern" id="pnum" required><br>
+        </div>
+        <br>
+        <div class="userdiv">
+            <i class="fa fa-key uicon" aria-hidden="true"></i>
+            <input type="password" placeholder="Create Password" name="upass" class="usern" id="upass" required>
+        </div>
+
+        <br>
+        <div class="userdiv">
+            <i class="fa fa-key uicon" aria-hidden="true"></i>
+            <input type="password" placeholder="Repeat Password" name="upassre" class="usern" id="upassre" required><br>
+        </div>
+        <br>
+        <div class="userdiv">
+            <i class="fa fa-id-badge uicon" aria-hidden="true"></i>
+            <input type="text" placeholder="Enter hospital id" name="upassre" class="usern" id="uid" required>
+        </div>
+
+        <br>
+        <div class="userdiv">
+            <i class="fa fa-location-arrow uicon" aria-hidden="true"></i>
+            <input type="text" placeholder="Enter your address" name="upassre" class="usern" id="uadd" required>
+        </div>
+
+        <br>
+        <button class="submit" id="submt">Register</button><br>
+    
+        <h2 class="ormar">or</h2>
+        <button class="submit" id="loginrega">Login</button>
+
+        </div>
+    </div>
+</body>
+</html>

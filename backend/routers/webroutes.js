@@ -17,8 +17,11 @@ webRouter.get("/register", function(req, res){
 webRouter.get("/admin", function(req, res){
     res.sendFile(path.join(htmlbase, "admin.html"));
  })
- webRouter.get("/adminregister", function(req, res){
+ webRouter.get("/adminreg", function(req, res){
     res.sendFile(path.join(htmlbase, "adminreg.html"));
+ })
+ webRouter.get("/appointment", function(req, res){
+    res.sendFile(path.join(htmlbase, "appoitment.html"));
  })
 
 

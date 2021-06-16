@@ -19,12 +19,6 @@ $(document).ready(function() {
     }
    }
    $("#signout").click(function(){
-      if(a.glog)
-       {
-         window.onbeforeunload = function(e){
-            gapi.auth2.getAuthInstance().signOut();
-          };
-       }
       localStorage.clear();
       location.reload();
    })

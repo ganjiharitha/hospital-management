@@ -1,0 +1,20 @@
+.inputsec{
+    background-color : white;
+    width: 30%;
+    height : auto;
+    margin-left : 40%;
+    margin-top : 10px;
+     border-radius: 25px;
+ border: 2px ;
+}
+.logheadreg{
+    padding : 30px 10%;
+    font-family : Arial;
+    height : 30px;
+    width : 200%;
+}
+.loginreg{
+    font-size : 20px;
+    padding-left : 45%;
+    cursor: pointer;
+}

@@ -1,29 +1,33 @@
 const mongoose=require('mongoose');
 var register=new mongoose.Schema({
-    email : {
+    role : {
+        type : String,
+        require : true
+    },
+    hemail : {
         type : String,
         required : true
     },
-    name : {
+   hname : {
         type : String,
         required : true
     },
-    phonenumber : {
+    hpnum : {
         type : String,
         required : true
     },
-    password : {
+    hpassword : {
         type : String,
         required : true
     },
-    address : {
+    haddress : {
         type : String,
         required : true
     },
-    docavailable:{
-        type : Number,
-        required :true
-    }
+    hid : {
+        type : String,
+        required : true
+    },
 
 }, {timestamps : true})
 var table=mongoose.model('admindb',register);
