@@ -1,0 +1,61 @@
+.totalsec{
+	width :100%;
+	height : auto;
+	margin: 0px;
+    padding : 0px;
+    overflow :hidden;
+	text-align : center;
+}
+.navb{
+	background-color: rgb(5, 5, 44);
+	overflow: hidden;
+    position : fixed;
+	width : 100%;
+  	height : 40px;
+	z-index: 1;
+	text-align : center;
+}
+.weltag{
+	float : right;
+
+	color : white;
+	margin-top : 5px;
+}
+.homeregb{
+	float : right;
+	width :100px;
+	height : 30px;
+	text-align: center;
+	background-color: dodgerblue;
+	border: none;
+	cursor: pointer;
+	margin-left: 20px;
+	margin-top : 5px;
+	font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+}
+.homesignb{
+	float : right;
+	width :100px;
+	height : 30px;
+	text-align: center;
+	background-color: dodgerblue;
+	border: none;
+	margin-top : 5px;
+	cursor: pointer;
+	margin-left: 20px;
+	font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+	display: none;
+}
+.homelogb{
+	float : right;
+	width :100px;
+	height : 30px;
+	margin-top : 5px;
+	text-align: center;
+	background-color: dodgerblue;
+	border: none;
+	cursor: pointer;
+	margin-left: 20px;
+	font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}

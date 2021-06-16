@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="google-signin-client_id" content="1072993861316-l4kbjd0ik5nk87h6shaas0v357ps8l5p.apps.googleusercontent.com">
+    <title>Register Page</title>
+    <link rel="stylesheet" href="/allcssfiles/logincs.css">
+    <link rel="stylesheet" href="/allcssfiles/regcss.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+     <script src="https://apis.google.com/js/platform.js" async defer></script>
+     <script src="/alljsfile/registerjs.js"></script>
+     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+</head>
+<body>
+    <div class="wholepage">
+        <div class="inputsec">
+            <div class="logheadreg">
+                <h1>Register</h1>
+            </div>
+            <br><br>
+                    <div class="userdiv">
+                        <i class="fa fa-user uicon" aria-hidden="true"></i>
+                        <input type="text" placeholder="Enter your name" name="uname" class="usern" id ="uname" required><br>
+                     </div>
+
+                   <br>
+                    <div class="userdiv">
+                        <i class="fa fa-envelope-o uicon" aria-hidden="true"></i>
+                        <input type="email" placeholder="Email address" name="ename" class="usern" id ="ename" required><br>
+                     </div>
+
+                    <br>
+                    <div class="userdiv">
+                        <i class="fa fa-phone uicon" aria-hidden="true"></i>
+                        <input type="text" placeholder="Phone Number" name="pnum" class = "usern" id="pnum" required><br>
+                    </div>
+
+                    <br>
+                    <div class="userdiv">
+                        <i class="fa fa-key uicon" aria-hidden="true"></i>
+                        <input type="password" placeholder="Create Password" name="upass" class="usern" id="upass" required>
+                    </div>
+
+                    <br>
+                    <div class="userdiv">
+                        <i class="fa fa-key uicon" aria-hidden="true"></i>
+                        <input type="password" placeholder="Repeat Password" name="upassre" class="usern" id="upassre" required>
+                    </div>
+
+                    <br>
+                    <button class="submit" id="submt">Register</button><br><br>
+                    <!--button class="googlebtn" onclick="regwithggl()"><i class="fa fa-google fa-fw"></i> signup with Google+</button-->
+                    <center>
+                        <div class="g-signin2" data-onsuccess="onSignIn"></div>
+                    </center>
+                    <br>
+                    <button class="submit" id="loginrega">Login</button>
+                    <br>
+                    <br>
+        </div>
+    </div>
+</body>
+</html>
