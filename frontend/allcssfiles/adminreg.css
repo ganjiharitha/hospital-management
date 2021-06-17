@@ -1,9 +1,11 @@
+.body{
+    height : auto;
+}
 .inputsec{
     background-color : white;
     width: 30%;
-    height : auto;
+    height :auto;
     margin-left : 40%;
-    margin-top : 10px;
      border-radius: 25px;
  border: 2px ;
 }

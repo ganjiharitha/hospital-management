@@ -6,10 +6,9 @@ var register=new mongoose.Schema({
     phonenumber:{type:String,required : true}, 
     appointmentdate : {type:String,required : true},
     time : {type:String,required : true},
-    typeofdoc : {type:String,required : true},
-    isdone:{type:Boolean,required : true},
-    cancelit:{type:String,required : true}
-
+    doctype : {type:String,required : true},
+    doctorid:{type:String,required : true},
+    doctorname:{type:String,required : true},
 }, {timestamps : true})
 var table=mongoose.model('appoitment',register);
 module.exports=table;

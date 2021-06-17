@@ -1,11 +1,12 @@
 $(document).ready(function() {
-    var newTest = { "name" : "", "email": "" , "phonenumber" : "" , "password" : ""};
+    var newTest = { "name" : "", "email": "" , "phonenumber" : "" , "password" : "","address":"","role":"user","hid":""};
     $("#submt").click(function(){
-      
       newTest.name= $('#uname').val();
       newTest.email= $('#ename').val();
       newTest.phonenumber= $('#pnum').val();
       newTest.password= $('#upass').val();
+      newTest.address= $('#uadd').val();
+      newTest.hid=Date.now();
       var repass = $('#upassre').val();
       var passw=  /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{8,15}$/;
       if(newTest.password == repass){
@@ -14,12 +15,8 @@ $(document).ready(function() {
           $.post("/api/reg/post",newTest)
           .done(function(data){
             if(data.success){
-              $('#uname').val('');
-              $('#ename').val('');
-              $('#pnum').val('');
-              $('#upass').val('');
-              $('#upassre').val('');
-              alert("pelase kindly login to your account");
+              
+              alert("pelase kindly login to your account.Please remember your id"+data.idis);
               window.location.href ="https://hospital-management-mini.herokuapp.com/login";
             }
             if(data.emailexist==true && data.nameexist==true)
@@ -55,23 +52,7 @@ $(document).ready(function() {
       }
     })
     $("#loginrega").click(function(){
-      window.location ="https://hospital-management-mini.herokuapp.com/register"
+      window.location ="https://hospital-management-mini.herokuapp.com/login"
     })
   
   })
-  
-  window.onbeforeunload = function(e){
-    gapi.auth2.getAuthInstance().signOut();
-  };
-  function onSignIn( googleUser )
-  {
-      var profile = googleUser.getBasicProfile();
-      var a=[];
-    if(JSON.parse(localStorage.getItem("loged_not"))!=null)
-      a=JSON.parse(localStorage.getItem("loged_not"));
-      var x={"success" : true,"message":"","user":profile.getName(),"glog":true};
-      a.push(x);
-      localStorage.setItem("loged_not",JSON.stringify(a));
-      console.log(a);
-      window.location ="https://hospital-management-mini.herokuapp.com/";
-  }

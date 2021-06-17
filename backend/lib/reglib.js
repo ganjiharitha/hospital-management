@@ -1,7 +1,7 @@
 const table = require("../models/regmodel");
 module.exports.addnew = function(req,res)
 {
-    var feed={success : false , emailexist : false , nameexist : false};
+    var feed={success : false , emailexist : false , nameexist : false,idis:""};
     (async () => {
         const  e = await table.findOne({email : req.body.email} , function(err,foundit){
             if(err)
@@ -33,21 +33,17 @@ module.exports.addnew = function(req,res)
         })
             if(feed.nameexist==false && feed.emailexist==false)
             {
-                const newTable = new table({
-                    name : req.body.name,
-                    email :req.body.email,
-                    phonenumber : req.body.phonenumber,
-                    password : req.body.password  
-                })
+                const newTable = new table(req.body);
                 newTable.save();
                 feed.success=true;
+                feed.idis=req.body.hid;
             }
             console.log(feed);
             res.send(feed);
     })();
 }
 module.exports.containornot = function(req,res){
-    var feedb = {success: false, message: "", user: "",glog:false }
+    var feedb = {success: false, role: "",hid:"",name:"",message:""}
     table.findOne({email : req.body.email} , function(err,foundit){
         if(err)
             console.log("error : "+err);
@@ -59,7 +55,9 @@ module.exports.containornot = function(req,res){
                     if(foundit.password == req.body.password)
                     {
                         feedb.success=true;
-                        feedb.user=foundit.name;
+                        feedb.role=foundit.role;
+                        feedb.name=foundit.name;
+                        feedb.hid=foundit.hid;
                     }
                     else{
                         feedb.message = "invalid email/password";

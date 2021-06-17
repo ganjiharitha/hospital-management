@@ -28,6 +28,14 @@ var register=new mongoose.Schema({
         type : String,
         required : true
     },
+    special : {
+        type : String,
+        required : true
+    },
+    gender :{
+        type : String,
+        required : true
+    },
 
 }, {timestamps : true})
 var table=mongoose.model('admindb',register);

@@ -15,7 +15,19 @@ var register=new mongoose.Schema({
     password : {
         type : String,
         required : true
-    }
+    },
+    role : {
+        type : String,
+        require : true
+    },
+    address : {
+        type : String,
+        required : true
+    },
+    hid : {
+        type : String,
+        required : true
+    },
 }, {timestamps : true})
 var table=mongoose.model('register',register);
 module.exports=table;
