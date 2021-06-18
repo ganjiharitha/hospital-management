@@ -62,7 +62,7 @@ $(document).ready(function() {
  function addRowpat(obj) {
     //console.log(obj);
    var row = `<tr scope="row" class="test-row-${obj._id}">
-                  <td>${obj.pnum}</td>
+                  <td>${obj.pname}</td>
                   <td>${obj.pid}</td>
                   <td>${obj.pemail}</td>
                   <td>${obj.pnum}</td>
