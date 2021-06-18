@@ -1,9 +1,9 @@
 const mongoose=require('mongoose');
 var register=new mongoose.Schema({
-   dname:{type:String,required : true},
-   did:{type:String,required : true},
-   doctype:{type:String,required : true},
-   gender:{type:String,required : true},
+   dname:{type:String},
+   did:{type:String},
+   doctype:{type:String},
+   gender:{type:String},
    dava:[
        {
            dtime : {type:String},
@@ -13,7 +13,17 @@ var register=new mongoose.Schema({
        }
    ],
    pat:[
-       {pidi:{type:String}}
+       {
+           pidi:{type:String},
+           pname:{type:String},
+           pgen:{type:String},
+           pgrp:{type:String},
+           page:{type:String},
+           pdate:{type:String},
+           ppast:{type:String},
+           pcurr:{type:String},
+           proom:{type:String}
+       }
    ]
 }, {timestamps : true})
 var table=mongoose.model('doctor',register);

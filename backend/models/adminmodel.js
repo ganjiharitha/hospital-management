@@ -1,40 +1,31 @@
 const mongoose=require('mongoose');
 var register=new mongoose.Schema({
     role : {
-        type : String,
-        require : true
+        type : String
     },
     hemail : {
-        type : String,
-        required : true
+        type : String
     },
    hname : {
-        type : String,
-        required : true
+        type : String
     },
     hpnum : {
-        type : String,
-        required : true
+        type : String
     },
     hpassword : {
-        type : String,
-        required : true
+        type : String
     },
     haddress : {
-        type : String,
-        required : true
+        type : String
     },
     hid : {
-        type : String,
-        required : true
+        type : String
     },
     special : {
-        type : String,
-        required : true
+        type : String
     },
     gender :{
-        type : String,
-        required : true
+        type : String
     },
 
 }, {timestamps : true})

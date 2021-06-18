@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="google-signin-client_id" content="1072993861316-l4kbjd0ik5nk87h6shaas0v357ps8l5p.apps.googleusercontent.com">
+    <title>Hospital Mangement</title>
+    <link rel="stylesheet" href="/allcssfiles/homepagecss.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script src="/alljsfile/recjs.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+</head>
+<body>
+<div class="totalsec">
+  <div class="navb">
+      <button class="homesignb" id="signout">signout</button>
+      <h3 class="weltag" id="weltag">Welcome User</h3>
+  </div>
+  <div class="divs" id="forrec">
+    <div class="reinp" id="recinp">
+      <button class="butt" id="appo">Appointment Details</button>
+      <button class="butt" id="pdet">Pateint Details</button>
+      <button class="butt" id="docl">DoctorList</button>
+      <button class="butt" id="admit">Admit Pateint</button>
+      <button class="butt" id="appoin">Appointment</button>
+    </div>
+    <div class="search" id="search">
+      <select  id="searchby" class ="searchby">
+          <option value="byname">Searchby Name</option>
+          <option value="byid">Searchby Id</option>
+      </select>
+      <input type="text" placeholder="Enter your text" name="uname" class="searchby" id ="userch" required><br>
+      <button class="butt" id="subbut">Search</button>
+    </div>
+    <div class="result" id="appoint">
+      <table class="table">
+          <thead>
+              <th scope="col">Patient id</th>
+              <th scope="col">Patient name</th>
+              <th scope="col">Email</th>
+              <th scope="col">Phonenumber</th>
+              <th scope="col">Date</th>
+              <th scope="col">Time</th>
+              <th scope="col">Doctor Id</th>
+              <th scope="col">Doctor Name</th>
+              <th scope="col">speciality</th>
+          </thead>
+          <tbody id="app-table">
+          </tbody>
+      </table>
+    </div>
+    <div class="docres" id="docres">
+      <table class="table">
+          <thead>
+              <th scope="col">Doctor id</th>
+              <th scope="col">Doctor name</th>
+              <th scope="col">Gender</th>
+              <th scope="col">speciality</th>
+              <th scope="col">Total Appointments</th>
+              <th scope="col">Total Admits</th>
+          </thead>
+          <tbody id="doc-table">
+          </tbody>
+      </table>
+    </div>
+    <div class="docres" id="patres">
+      <table class="table">
+          <thead>
+              <th scope="col">Pateint Name</th>
+              <th scope="col">Pateint id</th>
+              <th scope="col">Pateint Email</th>
+              <th scope="col">Pateint Number</th>
+              <th scope="col">Gender</th>
+              <th scope="col">Blood Group</th>
+              <th scope="col">Admitdate</th>
+              <th scope="col">Doctor id</th>
+              <th scope="col">Doctor name</th>
+              <th scope="col">speciality</th>
+              <th scope="col">Room Number</th>
+          </thead>
+          <tbody id="pat-table">
+          </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="withoutlog" id="withoutlog">
+
+  </div>
+    
+</div>
+</body>
+</html>

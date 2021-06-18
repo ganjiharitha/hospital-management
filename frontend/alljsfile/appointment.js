@@ -6,7 +6,7 @@ $(document).ready(function() {
       a=JSON.parse(localStorage.getItem("logeddetails"));
       //console.log(a);
     }
-    newTest={"name" : "" ,"email":"", "phonemunber" : "","doctype":"","date":"","time":""};
+    newTest={"name" : "" ,"email":"", "phonemunber" : "","doctype":"","date":"","time":"","docid":"","docname":"","pid":""};
     $("#submt").click(function(){
       newTest.name= $('#uname').val();
       newTest.email= $('#ename').val();
@@ -19,11 +19,21 @@ $(document).ready(function() {
         .done(function(data){
         if(data.success==true)
         {
+          newTest.docid=data.foundid;
+          newTest.docname=data.name;
+          $.post("/api/appoint/save",newTest)
+          .done(function(dat){
+            if(data)
+            {
+              console.log("done");
+            }
+          })
           alert("Appointment conformed");
           window.location ="https://hospital-management-mini.herokuapp.com/";
 
         }
         else{
+          location.reload();
           alert("Slot is not Free");
         }
       })

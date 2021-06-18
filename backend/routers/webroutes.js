@@ -23,6 +23,18 @@ webRouter.get("/admin", function(req, res){
  webRouter.get("/appointment", function(req, res){
     res.sendFile(path.join(htmlbase, "appoitment.html"));
  })
+ webRouter.get("/admit", function(req, res){
+    res.sendFile(path.join(htmlbase, "admitpat.html"));
+ })
+ webRouter.get("/reception", function(req, res){
+    res.sendFile(path.join(htmlbase, "recep.html"));
+ })
+  webRouter.get("/doctor", function(req, res){
+    res.sendFile(path.join(htmlbase, "docth.html"));
+ })
+  webRouter.get("/user", function(req, res){
+    res.sendFile(path.join(htmlbase, "foruser.html"));
+ })
 
 
 module.exports = webRouter;

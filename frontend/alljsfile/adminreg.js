@@ -48,7 +48,9 @@ $(document).ready(function() {
                       })
                   }
                   else
-                  window.location.href ="https://hospital-management-mini.herokuapp.com/admin";
+                  {
+                    window.location.href ="https://hospital-management-mini.herokuapp.com/admin";
+                  }
 
                   
                 }

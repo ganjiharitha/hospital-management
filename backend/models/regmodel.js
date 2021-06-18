@@ -1,32 +1,25 @@
 const mongoose=require('mongoose');
 var register=new mongoose.Schema({
     email : {
-        type : String,
-        required : true
+        type : String
     },
     name : {
-        type : String,
-        required : true
+        type : String
     },
     phonenumber : {
-        type : String,
-        required : true
+        type : String
     },
     password : {
-        type : String,
-        required : true
+        type : String
     },
     role : {
-        type : String,
-        require : true
+        type : String
     },
     address : {
-        type : String,
-        required : true
+        type : String
     },
     hid : {
-        type : String,
-        required : true
+        type : String
     },
 }, {timestamps : true})
 var table=mongoose.model('register',register);
