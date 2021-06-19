@@ -1,9 +1,9 @@
 $(document).ready(function() {
     var a=[];
    window.onload=function(){
-    $('#search').hide();
     $('#appoint').hide();
     $('#adm').hide();
+    $('#picid').show();
     if(JSON.parse(localStorage.getItem("logeddetails"))!=null)
     a=JSON.parse(localStorage.getItem("logeddetails"));
     $('#weltag').html("Welcome "+a[0].name);
@@ -14,9 +14,9 @@ $(document).ready(function() {
         window.location="https://hospital-management-mini.herokuapp.com/";
      })
     $("#pat").click(function(){
-        $('#search').show();
         $('#adm').show();
         $('#appoint').hide();
+        $('#picid').hide();
         $('#adm-table').empty();
         $.get("/api/doc/patint/"+a[0].hid,function(data,status){
             for (var i in data) {
@@ -25,9 +25,9 @@ $(document).ready(function() {
          });
     })
     $("#appo").click(function(){
-        $('#search').show();
         $('#appoint').show();
         $('#adm').hide();
+        $('#picid').hide();
         $('#pat-table').empty();
         $.get("/api/doc/appo/"+a[0].hid,function(data,status){
             for (var i in data) {

@@ -1,10 +1,10 @@
 $(document).ready(function() {
     var a=[];
    window.onload=function(){
-    $('#search').hide();
     $('#appoint').hide();
     $('#docres').hide();
     $('#patres').hide();
+    $('#picid').show();
     if(JSON.parse(localStorage.getItem("logeddetails"))!=null)
     a=JSON.parse(localStorage.getItem("logeddetails"));
     $('#weltag').html("Welcome "+a[0].name);
@@ -21,10 +21,10 @@ $(document).ready(function() {
         window.location="https://hospital-management-mini.herokuapp.com/";
      })
     $("#pdet").click(function(){
-        $('#search').show();
         $('#patres').show();
         $('#appoint').hide();
         $('#docres').hide();
+        $('#picid').hide();
         $('#pat-table').empty();
         $.get("/api/rec/patint",function(data,status){
             for (var i in data) {
@@ -33,10 +33,10 @@ $(document).ready(function() {
          });
     })
     $("#docl").click(function(){
-        $('#search').show();
         $('#appoint').hide();
         $('#docres').show();
         $('#patres').hide();
+        $('#picid').hide();
         $('#doc-table').empty();
         $.get("/api/rec/doc",function(data,status){
             for (var i in data) {
@@ -46,10 +46,10 @@ $(document).ready(function() {
         
     })
     $("#appo").click(function(){
-        $('#search').show();
         $('#appoint').show();
         $('#docres').hide();
         $('#patres').hide();
+        $('#picid').hide();
         $('#app-table').empty();
         $.get("/api/rec/appo",function(data,status){
             for (var i in data) {

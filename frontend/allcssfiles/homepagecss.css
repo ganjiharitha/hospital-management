@@ -87,6 +87,34 @@
 	width: 100%;
 	height : auto;
 }
+.homepicnot{
+	width :100%;
+}
+.divc{
+	width: 100%;
+	height : auto;
+	margin-top: 45px;
+}
+.navc{
+	background-color: rgb(2, 204, 255);
+	overflow: hidden;
+    position : fixed;
+	width : 100%;
+  	height : auto;
+	z-index: 1;
+	text-align : center;
+}
+.secnavtags{
+	margin: 0px;
+	float : left;
+	margin-right : 9%;
+	color: rgb(8, 4, 48);
+}
+.note{
+	margin-top: 30px;
+	margin-bottom: 0px;
+	color: red;
+}
 table{
 	border-collapse: collapse;
 	width : 100%;
