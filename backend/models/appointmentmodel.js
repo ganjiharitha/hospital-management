@@ -8,7 +8,8 @@ var register=new mongoose.Schema({
     time : {type:String},
     doctype : {type:String},
     doctorid:{type:String},
-    doctorname:{type:String},
+    doctorname:{type:String}
+    //userid: { type: Schema.Types.ObjectId, ref: 'user' ,requires : true}
 }, {timestamps : true})
 var table=mongoose.model('appoitment',register);
 module.exports=table;

@@ -19,6 +19,7 @@
   "homepage": "https://github.com/ganjiharitha/hospital-management#readme",
   "dependencies": {
     "express": "^4.17.1",
+    "express-session": "^1.17.2",
     "mongoose": "^5.12.14",
     "saslprep": "^1.0.3"
   }

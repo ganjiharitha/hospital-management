@@ -26,6 +26,7 @@ apiRouter.post('/appoint/give',appointlib.addnew);
 apiRouter.post('/appoint/save',appointlib.newsave);
 apiRouter.get('/all/appoint',appointlib.getall);
 apiRouter.get('/rec/appo',appointlib.getappo);
+apiRouter.get('/user/appo/:id',appointlib.userappo);
 
 apiRouter.post('/admin/post',admitlib.addnew);
 apiRouter.get('/rec/patint',admitlib.getpat);

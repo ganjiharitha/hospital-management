@@ -43,7 +43,7 @@ module.exports.addnew = function(req,res)
     })();
 }
 module.exports.containornot = function(req,res){
-    var feedb = {success: false, role: "",hid:"",name:"",message:""}
+    var feedb = {success: false, role: "",hid:"",name:"",message:"",email:"",pnum:""}
     table.findOne({email : req.body.email} , function(err,foundit){
         if(err)
             console.log("error : "+err);
@@ -58,6 +58,8 @@ module.exports.containornot = function(req,res){
                         feedb.role=foundit.role;
                         feedb.name=foundit.name;
                         feedb.hid=foundit.hid;
+                        feedb.email=foundit.email;
+                        feedb.pnum=foundit.phonenumber;
                     }
                     else{
                         feedb.message = "invalid email/password";

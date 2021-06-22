@@ -17,19 +17,37 @@
   </div>
   <div class="divs" id="foruser">
     <div class="reinp" id="recinp">
-      <button class="butt" id="appo">Make An Appointment</button><br><br>
-      <img class="homepicnot" src="/allpics/patimg.jpg"/>
+      <button class="butt" id="appo">Make An Appointment</button>
+      <button class="butt" id="myappo">My Appointments</button>
+      <br><br>
+      <img id="imgpic" class="homepicnot" src="/allpics/patimg.jpg"/>
     </div>
+  </div>
+  <div class="result" id="appoint">
+    <table class="table">
+        <thead>
+            <th scope="col">Patient Name</th>
+            <th scope="col">Date</th>
+            <th scope="col">Time</th>
+            <th scope="col">Doctor Name</th>
+            <th scope="col">Specialization</th>
+        </thead>
+        <tbody id="pat-table">
+        </tbody>
+    </table>
   </div>
 </div>
 </body>
 </html>
 <script>
   $(document).ready(function() {
+    $('#appoint').hide();
+    $('#imgpic').show();
     var a=[];
    window.onload=function(){
     if(JSON.parse(localStorage.getItem("logeddetails"))!=null)
     a=JSON.parse(localStorage.getItem("logeddetails"));
+    console.log(a);
     $('#weltag').html("Welcome "+a[0].name);
     }
     $("#signout").click(function(){
@@ -40,6 +58,26 @@
      $("#appo").click(function(){
       window.location="https://hospital-management-mini.herokuapp.com/appointment";
     })
+    $("#myappo").click(function(){
+      $('#appoint').show();
+    $('#imgpic').hide();
+      $.get("/api/user/appo/"+a[0].email,function(data,status){
+        for (var i in data) {
+                addRowpat(data[i]);
+            }
+         });
+    })
 
  });
+ function addRowpat(obj) {
+    //console.log(obj);
+   var row = `<tr scope="row" class="test-row-${obj._id}">
+                  <td>${obj.pname}</td>
+                  <td>${obj.appointmentdate}</td>
+                  <td>${obj.time}</td>
+                  <td>${obj.doctorname}</td>
+                  <td>${obj.doctype}</td>
+              </tr>`
+   $('#pat-table').append(row)
+}
 </script>

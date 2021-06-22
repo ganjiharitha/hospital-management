@@ -5,6 +5,11 @@ $(document).ready(function() {
     if(JSON.parse(localStorage.getItem("logeddetails"))!=null)
       a=JSON.parse(localStorage.getItem("logeddetails"));
       //console.log(a);
+      if(a[0].role=="user"){
+        $('#uname').val(a[0].name);
+        $('#ename').val(a[0].email);
+        $('#pnum').val(a[0].pnum);
+      }
     }
     newTest={"name" : "" ,"email":"", "phonemunber" : "","doctype":"","date":"","time":"","docid":"","docname":"","pid":""};
     $("#submt").click(function(){

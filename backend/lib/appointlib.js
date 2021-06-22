@@ -109,7 +109,19 @@ module.exports.newsave = function(req,res)
     doctype : req.body.doctype,
     doctorid:req.body.docid,
     doctorname:req.body.docname
+    //userid:req.session._id
     });
     newTable.save();
     feed.success=true;
+}
+module.exports.userappo = function(req,res)
+{
+    id=req.params.id;
+    table.find({email : id},function(err,found){
+        if(err)
+            console.log(err);
+        else{
+           res.send(found);
+        }
+    })
 }

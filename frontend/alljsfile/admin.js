@@ -26,7 +26,4 @@ $(document).ready(function() {
       })
       
     })
-    $("#rega").click(function(){
-      window.location ="https://hospital-management-mini.herokuapp.com/adminreg"
-    })
   })
