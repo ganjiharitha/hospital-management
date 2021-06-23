@@ -18,7 +18,7 @@ $(document).ready(function() {
     $("#signout").click(function(){
         localStorage.clear();
         location.reload();
-        window.location="https://hospital-management-mini.herokuapp.com/";
+        window.location="https://hospital-management-mini.herokuapp.com/logout";
      })
     $("#pdet").click(function(){
         $('#patres').show();

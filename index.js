@@ -16,7 +16,12 @@ app.use( session( {
 } ) );
 app.use(express.urlencoded({extended:true}));
 app.use(express.json());
-
+app.get('/logout',(req,res)=>{
+    res.clearCookie('connect.sid')
+    req.session.destroy(function (err) {
+      res.redirect('/'); //Inside a callback… bulletproof!
+     });
+  })
 
 app.use('/api',apirouters);
 app.use(webrouters);

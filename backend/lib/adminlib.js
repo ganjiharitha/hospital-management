@@ -62,6 +62,12 @@ module.exports.containornot = function(req,res){
                         feedb.hid=foundit.hid;
                         feedb.gender=foundit.gender;
                         feedb.special=foundit.special;
+                        req.session.user={success:true,
+                            role:foundit.role,
+                            name:foundit.hname,
+                            hid:foundit.hid,
+                            gender:foundit.gender,
+                            special:foundit.special}
                     }
                     else{
                         feedb.message = "invalid email/password";
