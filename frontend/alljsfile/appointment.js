@@ -5,6 +5,7 @@ $(document).ready(function() {
     if(JSON.parse(localStorage.getItem("logeddetails"))!=null)
       a=JSON.parse(localStorage.getItem("logeddetails"));
       //console.log(a);
+      $('#weltag').html("Welcome "+a[0].name);
       if(a[0].role=="user"){
         $('#uname').val(a[0].name);
         $('#ename').val(a[0].email);
@@ -47,4 +48,9 @@ $(document).ready(function() {
     $("#cancel").click(function(){
       window.location ="https://hospital-management-mini.herokuapp.com/";
     })
+    $("#signout").click(function(){
+      localStorage.clear();
+      location.reload();
+      window.location="https://hospital-management-mini.herokuapp.com/logout";
+   })
   })

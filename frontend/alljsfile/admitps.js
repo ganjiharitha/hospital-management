@@ -1,5 +1,12 @@
 $(document).ready(function() {
     var newTest = { "pname" : "","pid":"","pemail": "" ,"pnum" : "","gender":"","bloogd":"","admitdate":"","doctype":"","pasthelth":"","doctorid":"","doctorname":"","currentprob":"","roomnum":"","age":""};
+    window.onload=function(){
+      //localStorage.clear();
+    if(JSON.parse(localStorage.getItem("logeddetails"))!=null)
+      a=JSON.parse(localStorage.getItem("logeddetails"));
+      //console.log(a);
+      $('#weltag').html("Welcome "+a[0].name);
+    }
     $("#submt").click(function(){
         newTest.pname= $('#uname').val();
         newTest.pid= Date.now();
@@ -34,5 +41,10 @@ $(document).ready(function() {
     $("#cancel").click(function(){
       window.location ="https://hospital-management-mini.herokuapp.com/"
     })
+    $("#signout").click(function(){
+      localStorage.clear();
+      location.reload();
+      window.location="https://hospital-management-mini.herokuapp.com/logout";
+   })
   })
   
